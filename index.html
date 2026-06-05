@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>FinSpark AI — by Ankit Kumar Garg</title>
+<title>Zivest AI — by Ankit Kumar Garg</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,600;1,400&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -212,8 +212,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 
 <div class="topbar">
   <a class="brand" href="#">
-    <div class="brand-icon">F</div>
-    <div class="brand-name">FinSpark<span class="brand-by">by Ankit</span></div>
+    <svg width="32" height="32" viewBox="0 0 80 80" style="flex-shrink:0;border-radius:9px">
+  <rect width="80" height="80" rx="18" fill="#0f172a"/>
+  <text x="26" y="54" font-family="Georgia,serif" font-size="40" font-weight="700" fill="#2563eb" text-anchor="middle">Z</text>
+  <path d="M46 48 L60 24 M54 24 L60 24 L60 30" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+    <div class="brand-name">Zivest<span class="brand-by">by Ankit</span></div>
   </a>
   <div class="nav-tabs">
     <button class="tab active" onclick="showPage('advisor',this)"><i class="ti ti-robot"></i><span>AI Advisor</span></button>
@@ -301,7 +305,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <div class="news-item"><span class="news-tag">SEBI</span><div class="news-title">SEBI exploring new regulated asset class between Mutual Funds and PMS for ₹10L+ investors</div><div class="news-src">Source: SEBI consultation paper, 2025</div></div>
     </div>
     <div class="tip-card">
-      <div class="tip-label">💡 FinSpark Insight</div>
+      <div class="tip-label">💡 Zivest Insight</div>
       <div class="tip-text">Nifty is ~11% below its Jan 2026 peak. Historically, every Nifty correction of 10%+ has been followed by a full recovery within 12–18 months on average. For long-term SIP investors, corrections mean more units at lower prices — the power of Rupee Cost Averaging.</div>
     </div>
     <div class="mc">
@@ -313,11 +317,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <div class="idx-row"><span class="idx-name">Nifty 50 Index Funds</span><span></span><span class="chg neu">~13% CAGR</span></div>
     </div>
     <div class="mc full">
-      <div class="mc-hdr"><span class="mc-title"><i class="ti ti-bulb"></i> Product Thinking Behind FinSpark</span></div>
+      <div class="mc-hdr"><span class="mc-title"><i class="ti ti-bulb"></i> Product Thinking Behind Zivest</span></div>
       <div class="pm-grid">
-        <div class="pm-card"><div class="pm-label" style="color:var(--brand)">Funnel Design</div><div class="pm-text">The 5-question onboarding minimizes drop-off while maximizing signal quality. Each question is weighted to a risk score — same logic applied in enterprise robo-advisory at ET Money scale.</div></div>
+        <div class="pm-card"><div class="pm-label" style="color:var(--brand)">Funnel Design</div><div class="pm-text">The 5-question onboarding minimizes drop-off while maximizing signal quality. Each question is weighted to a risk score — the same logic used in enterprise-grade robo-advisory platforms handling millions of users.</div></div>
         <div class="pm-card"><div class="pm-label" style="color:var(--purple)">Personalization Engine</div><div class="pm-text">Risk profiling uses a 3-signal weighted model (age × risk behavior × time horizon). Output drives a Conservative / Moderate / Aggressive allocation with matching fund recommendations.</div></div>
-        <div class="pm-card"><div class="pm-label" style="color:var(--green)">Goal-Based Investing</div><div class="pm-text">Goal Planner calculates required monthly SIP using the FV formula, accounting for existing savings and return rate — mirrors how goal journeys were architected and shipped at ET Money.</div></div>
+        <div class="pm-card"><div class="pm-label" style="color:var(--green)">Goal-Based Investing</div><div class="pm-text">Goal Planner calculates required monthly SIP using the FV formula, accounting for existing savings and expected return rate — the same approach used in production goal-based investment journeys.</div></div>
       </div>
     </div>
   </div>
@@ -339,7 +343,7 @@ function showPage(id,el){
 
 /* ===== ADVISOR ===== */
 const Qs=[
-  {id:'age',text:"Hi! I'm your FinSpark AI advisor ✦\n\nAnswer 5 quick questions to get a fully personalized investment plan. First — what's your age group?",opts:['Under 25','25–35','35–45','45+']},
+  {id:'age',text:"Hi! I'm your Zivest AI advisor ✦\n\nAnswer 5 quick questions to get a fully personalized investment plan. First — what's your age group?",opts:['Under 25','25–35','35–45','45+']},
   {id:'goal',text:"What's your primary financial goal?",opts:['Wealth creation','Child education','Retirement planning','Dream home']},
   {id:'horizon',text:"How long can you stay invested without needing this money?",opts:['Under 3 years','3–5 years','5–10 years','10+ years']},
   {id:'risk',text:"Your portfolio drops 25% in a market crash. What do you do?",opts:['Sell everything immediately','Hold nervously','Stay calm and hold','Invest even more!']},
@@ -378,12 +382,12 @@ const msgs=document.getElementById('messages'),ci=document.getElementById('ci'),
 function scroll(){setTimeout(()=>msgs.scrollTop=msgs.scrollHeight,60)}
 function addMsg(type,content){
   const w=document.createElement('div');w.className='msg '+type;
-  const av=document.createElement('div');av.className='av '+type;av.textContent=type==='ai'?'F':'U';
+  const av=document.createElement('div');av.className='av '+type;av.textContent=type==='ai'?'Z':'U';
   const b=document.createElement('div');b.className='bub';
   if(typeof content==='string')b.innerHTML=content.replace(/\n/g,'<br>');else b.appendChild(content);
   w.appendChild(av);w.appendChild(b);msgs.appendChild(w);scroll();return b;
 }
-function addTyping(){const w=document.createElement('div');w.className='msg ai';w.id='typ';const av=document.createElement('div');av.className='av ai';av.textContent='F';const b=document.createElement('div');b.className='bub';b.innerHTML='<div class="typing"><span></span><span></span><span></span></div>';w.appendChild(av);w.appendChild(b);msgs.appendChild(w);scroll();}
+function addTyping(){const w=document.createElement('div');w.className='msg ai';w.id='typ';const av=document.createElement('div');av.className='av ai';av.textContent='Z';const b=document.createElement('div');b.className='bub';b.innerHTML='<div class="typing"><span></span><span></span><span></span></div>';w.appendChild(av);w.appendChild(b);msgs.appendChild(w);scroll();}
 function remTyping(){const e=document.getElementById('typ');if(e)e.remove();}
 function addQ(q){
   const el=document.createElement('div');el.style.cssText='font-size:13.5px;line-height:1.65';el.innerHTML=q.text.replace(/\n/g,'<br>');
@@ -456,7 +460,7 @@ function selectGoal(id,el){
       <div class="gd-field"><label>Expected CAGR (%)</label><input type="number" id="gr" value="${g.rate}" step="0.5"/></div>
     </div>
     <div class="gd-result" id="gdr"></div>
-    <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px 14px;margin-top:14px;font-size:12.5px;color:var(--text2);line-height:1.65;border:1px solid var(--border)"><strong style="color:var(--brand)">FinSpark Tip:</strong> ${g.tip}</div>`;
+    <div style="background:var(--surface2);border-radius:var(--radius-sm);padding:12px 14px;margin-top:14px;font-size:12.5px;color:var(--text2);line-height:1.65;border:1px solid var(--border)"><strong style="color:var(--brand)">Zivest Tip:</strong> ${g.tip}</div>`;
   function calc(){
     const T=parseFloat(document.getElementById('gt').value)||g.amount,Y=parseFloat(document.getElementById('gy').value)||g.yrs,S=parseFloat(document.getElementById('gs').value)||0,R=parseFloat(document.getElementById('gr').value)||g.rate;
     const r=R/12/100,n=Y*12,fvS=S*Math.pow(1+R/100,Y),rem=Math.max(0,T-fvS);
